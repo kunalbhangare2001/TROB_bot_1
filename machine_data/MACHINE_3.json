@@ -1,0 +1,60 @@
+{
+  "Power Issues": [
+    {
+      "step": "Ensure the main power switch is turned ON.",
+      "image": "power_switch.png"
+    },
+    {
+      "step": "Check if the emergency stop button is released.",
+      "image": "emergency_stop.png"
+    },
+    {
+      "step": "Verify the power cable is properly connected."
+    }
+  ],
+  "Boot Errors": {
+    "No Display on Screen": [
+      {
+        "step": "Confirm the monitor is powered ON.",
+        "image": "monitor_check.png"
+      },
+      {
+        "step": "Check HDMI or VGA cable connections."
+      }
+    ],
+    "System Stuck at Logo": [
+      {
+        "step": "Restart the system and press F8 to enter Safe Mode."
+      },
+      {
+        "step": "Contact IT support if the issue persists."
+      }
+    ]
+  },
+  "Fixture Problems": [
+    {
+      "step": "Check fixture alignment with the test head.",
+      "image": "fixture_alignment.png"
+    },
+    {
+      "step": "Inspect pins for any damage or wear."
+    }
+  ],
+  "Support_Documents": {
+    "Mechanical": [
+      "fixture_manual.pdf",
+      "pneumatic_system.pdf",
+      "mechanical_layout.pdf"
+    ],
+    "Software": [
+      "test_program_guide.pdf",
+      "software_troubleshooting.pdf",
+      "operating_system.pdf"
+    ],
+    "Electrical": [
+      "1-1-L5-50_2.0_electrical_drawing.pdf",
+      "it6724 (1).pdf",
+      "power_requirements.pdf"
+    ]
+  }
+}

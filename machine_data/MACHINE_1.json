@@ -1,0 +1,241 @@
+{
+  "Mechanical_Issues": {
+    "Conveyor_Belt_Problems": [
+      {
+        "step": "Check conveyor belt tension - should have 5-10mm deflection when pressed",
+        "image": "ate3_conveyor_belt.png"
+      },
+      {
+        "step": "Inspect belt for wear, cracks, or foreign objects"
+      },
+      {
+        "step": "Verify motor coupling alignment using dial indicator"
+      },
+      {
+        "step": "Lubricate conveyor bearings with specified grease (every 500 hours)"
+      },
+      {
+        "step": "Check belt tracking - adjust tracking rollers if belt drifts"
+      }
+    ],
+    "Fixture_Alignment_Error": [
+      {
+        "step": "Run automatic fixture alignment routine from HMI menu",
+        "image": "ate3_fixture_alignment.png"
+      },
+      {
+        "step": "Check fixture mounting bolts for looseness (torque: 25 N⋅m)"
+      },
+      {
+        "step": "Verify reference pins are clean and undamaged"
+      },
+      {
+        "step": "Use precision gauge to check fixture dimensions against drawing"
+      },
+      {
+        "step": "Recalibrate fixture position using laser measurement system"
+      }
+    ]
+  },
+  "Electrical_Faults": {
+    "Motor_Drive_Alarm": [
+      {
+        "step": "Check drive display for fault code - refer to fault code table",
+        "image": "ate3_drive_display.png"
+      },
+      {
+        "step": "Common codes: F001=Overcurrent, F002=Overvoltage, F003=Motor overload"
+      },
+      {
+        "step": "Check motor connections at terminal block for loose wires"
+      },
+      {
+        "step": "Measure motor insulation resistance (should be >1MΩ)"
+      },
+      {
+        "step": "Reset drive after clearing fault cause: Hold RESET button for 3 seconds"
+      }
+    ],
+    "Encoder_Signal_Loss": [
+      {
+        "step": "Check encoder cable connections - ensure proper shielding"
+      },
+      {
+        "step": "Measure encoder supply voltage: should be 5V ±0.25V",
+        "image": "ate3_encoder_connections.png"
+      },
+      {
+        "step": "Test encoder signals with oscilloscope - A, B, Z channels"
+      },
+      {
+        "step": "Clean encoder disk if contaminated with dust or oil"
+      },
+      {
+        "step": "Replace encoder if mechanical damage is detected"
+      }
+    ]
+  },
+  "Vision_System_Problems": {
+    "Camera_Focus_Issues": [
+      {
+        "step": "Check camera lens for dust, fingerprints, or scratches",
+        "image": "ate3_camera_lens.png"
+      },
+      {
+        "step": "Run auto-focus calibration routine from vision software"
+      },
+      {
+        "step": "Adjust camera height: optimal distance is 150mm from target"
+      },
+      {
+        "step": "Verify LED ring light intensity - should be 80% brightness"
+      },
+      {
+        "step": "Update camera firmware if focus hunting occurs"
+      }
+    ],
+    "Image_Processing_Timeout": [
+      {
+        "step": "Check CPU usage during image processing - should be <70%"
+      },
+      {
+        "step": "Increase processing timeout in vision software settings (current: 5 seconds)"
+      },
+      {
+        "step": "Optimize image processing algorithms - use ROI to reduce processing area"
+      },
+      {
+        "step": "Add more RAM if memory usage exceeds 8GB during operation"
+      }
+    ]
+  },
+  "Environmental_Control": {
+    "Humidity_Control_Fault": [
+      {
+        "step": "Check humidity sensor reading - should be 45±5% RH",
+        "image": "ate3_humidity_sensor.png"
+      },
+      {
+        "step": "Inspect dehumidifier operation - check water collection tank"
+      },
+      {
+        "step": "Clean humidity sensor with isopropyl alcohol"
+      },
+      {
+        "step": "Verify HVAC system operation - check air flow rate"
+      },
+      {
+        "step": "Calibrate humidity controller using certified reference standard"
+      }
+    ],
+    "Vibration_Isolation_Problem": [
+      {
+        "step": "Check anti-vibration mounts for wear or deflection"
+      },
+      {
+        "step": "Measure vibration levels using accelerometer - should be <0.1g RMS"
+      },
+      {
+        "step": "Inspect foundation for cracks or settling"
+      },
+      {
+        "step": "Verify equipment isolation from building vibrations"
+      }
+    ]
+  },
+  "Data_Acquisition_Errors": {
+    "ADC_Noise_Issues": [
+      {
+        "step": "Check ground connections - ensure single point grounding"
+      },
+      {
+        "step": "Measure noise floor with inputs shorted - should be <10μV RMS"
+      },
+      {
+        "step": "Verify shield connections on all analog cables"
+      },
+      {
+        "step": "Use twisted pair cables for differential signals"
+      },
+      {
+        "step": "Add ferrite cores to cables if EMI interference suspected"
+      }
+    ],
+    "Sampling_Rate_Error": [
+      {
+        "step": "Check ADC sampling configuration - current rate: 100kS/s"
+      },
+      {
+        "step": "Verify anti-aliasing filter settings - cutoff at 40kHz"
+      },
+      {
+        "step": "Monitor CPU load during high-speed acquisition"
+      },
+      {
+        "step": "Use DMA for data transfer to reduce CPU overhead"
+      }
+    ]
+  },
+  "Quality_Control_Issues": [
+    {
+      "step": "Verify test limits are within specification tolerance"
+    },
+    {
+      "step": "Check measurement repeatability - perform 10 consecutive measurements",
+      "image": "ate3_repeatability_test.png"
+    },
+    {
+      "step": "Validate test correlation with reference measurements"
+    },
+    {
+      "step": "Review statistical process control charts for trends"
+    },
+    {
+      "step": "Update test specifications if product design has changed"
+    }
+  ],
+  "Maintenance_Reminders": [
+    {
+      "step": "Daily: Check consumables levels (contact probes, test fixtures)"
+    },
+    {
+      "step": "Weekly: Clean vision system lenses and LED illumination"
+    },
+    {
+      "step": "Monthly: Calibrate measurement instruments and update certificates"
+    },
+    {
+      "step": "Quarterly: Perform mechanical alignment checks and adjustments"
+    },
+    {
+      "step": "Annually: Complete preventive maintenance per schedule PM-ATE3-001"
+    }
+  ],
+  "Support_Documents": {
+    "Operation_Manuals": [
+      "ATE3_System_Operation_Manual_v3.2.pdf",
+      "ATE3_Vision_System_User_Guide.pdf",
+      "ATE3_Environmental_Control_Manual.pdf"
+    ],
+    "Technical_Documentation": [
+      "ATE3_Electrical_Schematics.pdf",
+      "ATE3_Mechanical_Drawings.pdf",
+      "ATE3_Software_Architecture.pdf"
+    ],
+    "Calibration_Procedures": [
+      "ATE3_Measurement_Calibration_Procedure.pdf",
+      "ATE3_Vision_System_Calibration.pdf",
+      "ATE3_Environmental_Sensor_Calibration.pdf"
+    ],
+    "Troubleshooting_Guides": [
+      "ATE3_Fault_Code_Reference.pdf",
+      "ATE3_Preventive_Maintenance_Checklist.pdf",
+      "ATE3_Emergency_Response_Procedures.pdf"
+    ],
+    "Quality_Documentation": [
+      "ATE3_Measurement_Uncertainty_Analysis.pdf",
+      "ATE3_Statistical_Process_Control_Guide.pdf",
+      "ATE3_Validation_Test_Reports.pdf"
+    ]
+  }
+}

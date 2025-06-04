@@ -1,0 +1,200 @@
+{
+  "Power_Issues": {
+    "Power_Supply_Failure": [
+      {
+        "step": "Check main power switch - ensure it's in ON position",
+        "image": "ate2_power_switch.png"
+      },
+      {
+        "step": "Verify input voltage at main terminal block (Expected: 380V AC ±10%)"
+      },
+      {
+        "step": "Check power supply unit LED indicators - Green=Normal, Red=Fault",
+        "image": "ate2_psu_indicators.png"
+      },
+      {
+        "step": "Measure +24V DC output at test points TP1-TP4"
+      },
+      {
+        "step": "If voltage is low, check cooling fans and clean air filters"
+      },
+      {
+        "step": "Replace power supply module if fault persists"
+      }
+    ],
+    "UPS_Battery_Low": [
+      {
+        "step": "Check UPS display panel for battery status",
+        "image": "ate2_ups_panel.png"
+      },
+      {
+        "step": "Press TEST button to verify battery backup time (should be >15 minutes)"
+      },
+      {
+        "step": "If backup time is insufficient, schedule battery replacement"
+      },
+      {
+        "step": "Check battery connection terminals for corrosion"
+      }
+    ]
+  },
+  "Communication_Errors": {
+    "Ethernet_Connection_Lost": [
+      {
+        "step": "Check ethernet cable connections at both ends"
+      },
+      {
+        "step": "Verify network switch LED status - should show solid green link",
+        "image": "ate2_network_switch.png"
+      },
+      {
+        "step": "Ping test: Open command prompt and ping 192.168.2.100"
+      },
+      {
+        "step": "Check firewall settings - ATE2 uses ports 8080, 8081, 9000"
+      },
+      {
+        "step": "Restart network service: Services → ATE2_NetworkManager → Restart"
+      }
+    ],
+    "Serial_Port_Error": [
+      {
+        "step": "Verify COM port settings: 115200 baud, 8N1, no flow control"
+      },
+      {
+        "step": "Check serial cable integrity with multimeter"
+      },
+      {
+        "step": "Try different COM port (COM3 or COM4 as backup)"
+      },
+      {
+        "step": "Update serial driver if problem persists"
+      }
+    ]
+  },
+  "Hardware_Faults": {
+    "Pneumatic_Pressure_Low": [
+      {
+        "step": "Check main air pressure gauge - should read 6.5 ± 0.2 bar",
+        "image": "ate2_pressure_gauge.png"
+      },
+      {
+        "step": "Inspect air filter regulator for water accumulation"
+      },
+      {
+        "step": "Check pneumatic cylinders for air leaks (listen for hissing sounds)"
+      },
+      {
+        "step": "Verify compressor operation - should cycle automatically"
+      },
+      {
+        "step": "Replace air filter element if contaminated"
+      }
+    ],
+    "Temperature_Sensor_Fault": [
+      {
+        "step": "Check temperature display on HMI - should show 23±2°C ambient"
+      },
+      {
+        "step": "Inspect PT100 sensor connections at terminal block TB5",
+        "image": "ate2_temp_sensor.png"
+      },
+      {
+        "step": "Measure sensor resistance: should be ~100Ω at 0°C"
+      },
+      {
+        "step": "Calibrate temperature controller if readings are offset"
+      }
+    ]
+  },
+  "Software_Issues": {
+    "Test_Program_Error": [
+      {
+        "step": "Check test program version - current stable: v2.4.1"
+      },
+      {
+        "step": "Verify test sequence file integrity in C:\\ATE2\\TestSeq\\"
+      },
+      {
+        "step": "Clear temporary files: Delete contents of C:\\ATE2\\Temp\\"
+      },
+      {
+        "step": "Restart ATE2 Test Engine service"
+      },
+      {
+        "step": "If error persists, restore from backup: C:\\ATE2\\Backup\\TestSeq_Backup.zip"
+      }
+    ],
+    "Database_Connection_Failed": [
+      {
+        "step": "Check database server status - ping ate2-db-server.local"
+      },
+      {
+        "step": "Verify database credentials in config file: C:\\ATE2\\Config\\db_config.xml"
+      },
+      {
+        "step": "Test connection using ATE2 Database Tool"
+      },
+      {
+        "step": "Check available disk space on database server (minimum 10GB required)"
+      }
+    ]
+  },
+  "Calibration_Issues": [
+    {
+      "step": "Run daily calibration check using built-in calibration wizard"
+    },
+    {
+      "step": "Use certified reference standards for voltage/current calibration",
+      "image": "ate2_calibration_setup.png"
+    },
+    {
+      "step": "Record calibration results in logbook with date and operator signature"
+    },
+    {
+      "step": "If drift exceeds ±0.1%, perform full recalibration procedure"
+    },
+    {
+      "step": "Update calibration certificate and schedule next calibration"
+    }
+  ],
+  "Emergency_Procedures": [
+    {
+      "step": "EMERGENCY STOP: Press red mushroom button on front panel immediately"
+    },
+    {
+      "step": "Turn off main power switch and wait 30 seconds before restart"
+    },
+    {
+      "step": "Check for any visible damage or burning smell"
+    },
+    {
+      "step": "Contact maintenance supervisor before resuming operation"
+    },
+    {
+      "step": "Document incident in safety logbook with timestamp and description"
+    }
+  ],
+  "Support_Documents": {
+    "User_Manuals": [
+      "ATE2_Operating_Manual_v2.4.pdf",
+      "ATE2_Quick_Start_Guide.pdf",
+      "ATE2_Safety_Guidelines.pdf"
+    ],
+    "Technical_Specifications": [
+      "ATE2_Hardware_Specifications.pdf",
+      "ATE2_Software_Requirements.pdf",
+      "ATE2_Calibration_Procedures.pdf"
+    ],
+    "Maintenance_Guides": [
+      "ATE2_Preventive_Maintenance_Schedule.pdf",
+      "ATE2_Spare_Parts_Catalog.pdf",
+      "ATE2_Troubleshooting_Flowchart.pdf"
+    ],
+    "Software_Documentation": [
+      "ATE2_Test_Program_Development_Guide.pdf",
+      "ATE2_Database_Schema_Reference.pdf",
+      "ATE2_API_Documentation.pdf"
+    ]
+  }
+}
